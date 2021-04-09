@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import ChatListItem from '../components/chatListItem';
-import { data } from '../components/data';
+import { data } from '../data';
 
 import { View } from '../components/Themed';
 
@@ -13,7 +13,7 @@ export default function TabOneScreen() {
         keyExtractor={(item) => item.id.toString()}
         renderItem={({item}) => <ChatListItem conversation={item}/> } 
         ItemSeparatorComponent={() => 
-          <View style = {{marginStart:70,borderBottomWidth:1,borderColor:"grey"}} />
+          <View style = {{marginStart:63,borderBottomWidth:1,borderColor:"grey"}} />
         }
         />
     </View>
@@ -22,7 +22,6 @@ export default function TabOneScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    padding:10,
     flex: 1,
   },
 });
